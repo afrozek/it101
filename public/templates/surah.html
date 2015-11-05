@@ -1,0 +1,37 @@
+<!-- <div id="translation_container" class="col-sm-4 border clear_padding clear_margin">
+	<h3 class="title center_text">Meaning</h3>
+</div> -->
+<div id="surah_container"class="col-sm-8 border  clear_left_border clear_right_border clear_padding clear_margin">
+	<h3 class="title center_text" ng-click="pausePlay()">surah{{currentVerse}}</h3>
+	<div class="surah  clear_padding" ng-model="surah">
+		
+
+		<div class="single_verse" ng-repeat="ayah in surah"  ng-click="clickedVerse(ayah)" ng-class='{current : ayah.ayah == currentVerse}' id={{$index+1}}>		
+			
+				<div class="translation_item col-xs-6 clear_padding">
+					{{translation[$index].__cdata}}
+				</div>
+				<div class="ayah_num col-xs-1 clear_padding">
+					{{$index+1}}
+				</div>
+				<div class="verse_item col-xs-5 clear_padding">
+					{{ayah.verse}}
+				</div>
+
+		</div>
+
+
+	
+
+
+	</div>
+</div>
+
+<div id="temp">
+	<h1>trans</h1>
+<h1>what</h1>
+
+	<p ng-repeat="verse in translation">
+		{{verse.__cdata}}
+	</p>
+</div>
