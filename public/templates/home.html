@@ -11,7 +11,17 @@
 	<div class="list">
 		<div class="surah_list_item" ng-repeat="surah in surahList.surahs" ng-click="openSurah($index+1)" href="www.nba.com">
 			<div id="meter" class="meter clear_padding col-xs-3">--</div>
-			<div class="name clear_padding col-xs-7">{{surah}}</div>
+			<div class="name clear_padding col-xs-7">
+				<div class="progress"><!-- start progress -->
+				<h3 class="surah_title">{{surah}}</h3>
+				  <div class="progress-bar progress-bar-success  active" style="width:{{progress[$index]}}%">
+				    <span class="percent">{{progress[$index]}}%</span>
+				  </div>
+				  <div class="progress-bar progress-bar-info progress-bar-striped active" style="width:{{100-(progress[$index])}}%">
+				    <span class="percent">{{100-(progress[$index])}}% remaining</span>
+				  </div>
+				</div> <!-- end progress -->
+			</div>
 			<div class="number clear_padding col-xs-2">{{$index + 1}}</div>
 		</div >
 	</div>

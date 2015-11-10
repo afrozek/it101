@@ -142,6 +142,10 @@ angular.module('app')
 
 	}])
 
+.factory('statsService',['$http',function($http){
+
+}])
+
 
 
 
